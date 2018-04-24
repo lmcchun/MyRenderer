@@ -1,0 +1,7 @@
+env = Environment()
+env.Append(CXXFLAGS = '-std=c++11')
+env.VariantDir('build', 'src', duplicate = 0)
+env.StaticLibrary('build/tga', 'build/image/tga.cpp')
+env.StaticLibrary('build/shape', ['build/shape/line.cpp', 'build/shape/triangle.cpp'])
+env.StaticLibrary('build/model', 'build/model/wavefront_obj.cpp')
+env.Program('bin/main', 'build/main.cpp', LIBS = ['tga', 'shape', 'model'], LIBPATH = 'build')
