@@ -10,8 +10,9 @@
 #include "../image/color.hpp"
 #include "../image/tga.hpp"
 
-namespace shape {
-    void line(geometry::Vec2i p0_, geometry::Vec2i p1_, image::TGA& image, const image::Color& color);
+namespace shape
+{
+	void line(geometry::Vec2i p0_, geometry::Vec2i p1_, image::TGA& image, const image::Color& color);
 }
 
 #endif /* line_hpp */

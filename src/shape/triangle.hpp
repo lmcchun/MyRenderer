@@ -12,7 +12,7 @@
 
 namespace shape
 {
-    void triangle(geometry::Vec2i p0, geometry::Vec2i p1, geometry::Vec2i p2, image::TGA& image, const image::Color& color);
+	void triangle(geometry::Vec2i p0, geometry::Vec2i p1, geometry::Vec2i p2, image::TGA& image, const image::Color& color);
 }
 
 #endif /* triangle_hpp */

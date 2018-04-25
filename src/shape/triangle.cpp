@@ -10,9 +10,20 @@ using geometry::Vec2i;
 
 namespace shape
 {
-    void triangle(geometry::Vec2i p0, geometry::Vec2i p1, geometry::Vec2i p2, image::TGA& image, const image::Color& color) {
-        line(p0, p1, image, color);
-        line(p1, p2, image, color);
-        line(p2, p0, image, color);
-    }
+	void triangle(geometry::Vec2i p0, geometry::Vec2i p1, geometry::Vec2i p2, image::TGA& image, const image::Color& color)
+	{
+		if (p0.y > p1.y)
+		{
+			std::swap(p0, p1);
+		}
+		if (p0.y > p2.y)
+		{
+			std::swap(p0, p2);
+		}
+		if (p1.y > p2.y)
+		{
+			std::swap(p1, p2);
+		}
+		// TODO
+	}
 }
