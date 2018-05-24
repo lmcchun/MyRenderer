@@ -23,35 +23,27 @@ namespace shape
 		{
 			std::swap(p0, p1);
 		}
-
 		int dx = p1.x - p0.x;
 		int dy = p1.y - p0.y;
 		int derror = std::abs(dy) * 2;
 		int error = 0;
 		int inc = p1.y > p0.y ? 1 : -1;
 		int y = p0.y;
-		if (steep)
+		for (int x = p0.x; x <= p1.x; ++x)
 		{
-			for (int x = p0.x; x <= p1.x; ++x)
+			if (steep)
 			{
 				image.set(y, x, color);
-				error += derror;
-				if (error > dx)
-				{
-					y += inc;
-					error -= dx * 2;
-				}
 			}
-		} else {
-			for (int x = p0.x; x <= p1.x; ++x)
+			else
 			{
 				image.set(x, y, color);
-				error += derror;
-				if (error > dx)
-				{
-					y += inc;
-					error -= dx * 2;
-				}
+			}
+			error += derror;
+			if (error > dx)
+			{
+				y += inc;
+				error -= dx * 2;
 			}
 		}
 	}
