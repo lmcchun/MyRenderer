@@ -9,10 +9,17 @@ namespace image
 		{
 			struct
 			{
+#ifdef BGRA
+				unsigned char b;
+				unsigned char g;
+				unsigned char r;
+				unsigned char a;
+#else
 				unsigned char r;
 				unsigned char g;
 				unsigned char b;
 				unsigned char a;
+#endif
 			};
 			unsigned char raw[4];
 			unsigned int value;

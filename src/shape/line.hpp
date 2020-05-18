@@ -12,7 +12,8 @@
 
 namespace shape
 {
-	void line(geometry::Vec2i p0_, geometry::Vec2i p1_, image::TGA& image, const image::Color& color);
+	void line(geometry::Vec2i p0, geometry::Vec2i p1, image::TGA& image, const image::Color& color);
+	void my_line(geometry::Vec2i p0, geometry::Vec2i p1, image::TGA& image, const image::Color& color);
 }
 
 #endif /* line_hpp */

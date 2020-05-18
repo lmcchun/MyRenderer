@@ -35,3 +35,9 @@
 bin/main
 bin/output.tga
 .xmake/
+
+.vs
+MyRenderer/MyRenderer.vcxproj.filters
+MyRenderer/MyRenderer.vcxproj.user
+Debug/
+Release/
